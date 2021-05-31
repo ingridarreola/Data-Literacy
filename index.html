@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Data Literacy</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -16,8 +16,62 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown id="class-one"> 
+					<script type="text/template">
+					# Data Fundamentals <!-- .element: class="r-fit-text"-->
+					Today we will talk about... <!-- .element: class="fragment" -->
+					- Data <!-- .element: class="fragment" -->
+					- Qualitative variables <!-- .element:  class="fragment" -->
+					- Quantitative variables <!-- .element: class="fragment" -->
+					- Visualization <!-- .element: class="fragment" -->
+					- Data Literacy <!-- .element: class="fragment" -->
+					</script>
+				</section>
+				<section data-markdown id="data"> 
+					<script type="text/template">
+					# What is <!-- .element: data-fragment-index="1" class="fragment" -->  Data <!-- .element: data-fragment-index="0" class="fragment" --> ? <!-- .element: data-fragment-index="1" class="fragment" --> 
+					---
+					Data is information and it can be made of qualitative or quantitative variables
+					</script>
+				</section>
+				<section data-markdown id="qualitative-variable">
+					<script type="text/template">
+					# Qualitative Variables <!-- .element: class="r-fit-text" -->
+					A variable is a measurement, property, or characteristic. <!-- .element: data-fragment-index="1" class="fragment"-->
+					
+					Qualitative variables include qualities or characteristics like country, gender, name, color. <!-- .element: data-fragment-index="2" class="fragment"-->
+					</script>
+				</section>
+				<section data-markdown id="quantitative-variable">
+					<script type="text/template">
+					# Quantitative Variables <!-- .element: class="r-fit-text" -->
+					A variable is a measurement, property, or characteristic. <!-- .element: data-fragment-index="1" class="fragment"-->
+					Quantitative variables include things that can be measured like height, money, speed, temperature. <!-- .element: data-fragment-index="2" class="fragment"-->
+					</script>
+				</section>
+				<section data-markdown id="variable-question">
+					<script type="text/template">
+					# Question: Is this a Qualitative or Quantitative Variable? <!-- .element: class="r-fit-text" -->
+					- Political party <!-- .element: class="fragment" -->
+						- Qualitative <!-- .element: class="fragment" -->
+					- Population count <!-- .element: class="fragment" -->
+						- Quantitative <!-- .element: class="fragment" -->
+					- Dorito's Flavor <!-- .element: class="fragment" -->
+						- Qualitative <!-- .element: class="fragment" -->
+					- Price <!-- .element: class="fragment" -->
+						- Quantitative <!-- .element: class="fragment" -->
+					- Cellphone brand <!-- .element: class="fragment" -->
+						- Qualitative <!-- .element: class="fragment" --> 
+					- Vote Count <!-- .element: class="fragment" -->
+						- Quantitative <!-- .element: class="fragment" -->
+					</script>
+				</section>
+				<section data-markdown id="visualization">
+					<script type="text/template">
+					# Visualization <!-- .element: class="r-fit-text" -->
+					Visualization is any kind of visual representation of information designed to enable analysis, discovery, exploration <!-- .element: class="fragment" -->
+					</script>
+				</section>
 			</div>
 		</div>
 
@@ -31,6 +85,10 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				history: true,
+				slideNumber: 'c/t',
+				loop: true,
+				transition: 'fade',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
