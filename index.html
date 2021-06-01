@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -36,7 +37,7 @@
 					Data is information and it can be made of qualitative or quantitative variables
 					</script>
 				</section>
-				<section data-markdown id="qualitative-variable" data-menu-title="Qualitative Variables">
+				<section data-markdown id="qualitative-variable" data-menu-title="Qualitative Variables" data-audio-text="A variable is a measurement, property, or characteristic. It includes qualities or characteristics like country, gender, name, color.">
 					<script type="text/template">
 					# Qualitative Variables <!-- .element: class="r-fit-text" -->
 					A variable is a measurement, property, or characteristic. <!-- .element: data-fragment-index="1" class="fragment"-->
@@ -44,14 +45,14 @@
 					Qualitative variables include qualities or characteristics like country, gender, name, color. <!-- .element: data-fragment-index="2" class="fragment"-->
 					</script>
 				</section>
-				<section data-markdown id="quantitative-variable" data-menu-title="Quantitative Variables">
+				<section data-markdown id="quantitative-variable" data-menu-title="Quantitative Variables" data-audio-text="Quantitative variables include things that can be measured like height, money, speed, temperature.">
 					<script type="text/template">
 					# Quantitative Variables <!-- .element: class="r-fit-text" -->
 					A variable is a measurement, property, or characteristic. <!-- .element: data-fragment-index="1" class="fragment"-->
 					Quantitative variables include things that can be measured like height, money, speed, temperature. <!-- .element: data-fragment-index="2" class="fragment"-->
 					</script>
 				</section>
-				<section data-markdown id="variable-question" data-menu-title="Variable Question">
+				<section data-markdown id="variable-question" data-menu-title="Variable Question" data-audio-text="Let's test your knowledge. Is a Political party a Qualitative or Quantitative Variable? It is a Qualitative variable.">
 					<script type="text/template">
 					# Question: Is this a Qualitative or Quantitative Variable? <!-- .element: class="r-fit-text" -->
 					- Political party <!-- .element: class="fragment" -->
@@ -126,6 +127,8 @@
 		<script src="plugin/audio-slideshow/recorder.js"></script>
 		<script src="plugin/audio-slideshow/RecordRTC.js"></script>
 		<script src="plugin/menu/menu.js"></script>
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<script src="plugin/chalkboard/plugin.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -223,10 +226,46 @@
 						
     					// By default the menu will load it's own font-awesome library icons. If your presentation needs to load a different font-awesome library the 'loadIcons' option can be set to false and the menu will not attempt to load the font-awesome library.
     					loadIcons: true
-  					},					
+  					},
+					  chalkboard: {
+        				boardmarkerWidth: 3,
+        				chalkWidth: 7,
+        				chalkEffect: 1.0,
+        				storage: null,
+        				src: null,
+        				readOnly: false,
+        				messageType: 'broadcast',
+        				toggleChalkboardButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
+        				toggleNotesButton: { left: "30px", bottom: "30px", top: "auto", right: "auto" },
+        				colorButtons: true,
+        				boardHandle: true,
+        				transition: 800,
+        				theme: "chalkboard",
+        				background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+        				grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+        				eraser: { src: path + 'img/sponge.png', radius: 20},
+        				boardmarkers : [
+        				        { color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+        				        { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+        				        { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+        				        { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+        				        { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+        				        { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+        				        { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+        				],
+        				chalks: [
+        				        { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+        				        { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+        				        { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+        				        { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+        				        { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+        				        { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+        				        { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+        				]
+    				},					
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealAudioSlideshow, RevealAudioRecorder, RevealMenu ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealChalkboard ]
 			});
 		</script>
 	</body>
